@@ -1,0 +1,18 @@
+ <article>
+
+ 		<% @stories.each do |story| %>
+
+ 	<section>
+		<h1>
+ 			<%= link_to story.title, story.url %>
+ 		<h1>	
+ 		
+ 		<p><%= simple_format story.body %></p>
+ 		<small>By <%= story.author %></small>
+ 		<small>About <%= time_ago_in_words story.created_at %></small>
+
+ 	</section>
+
+ <% end %>
+
+ </article>
